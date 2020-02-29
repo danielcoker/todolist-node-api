@@ -3,8 +3,10 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import colors from 'colors';
 import connectDB from './config/db';
-import { connect } from 'mongoose';
 
+/**
+ * @desc Load env vars.
+ */
 dotenv.config({ path: './config/config.env' });
 
 /**

@@ -2,8 +2,15 @@ import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import colors from 'colors';
+import connectDB from './config/db';
+import { connect } from 'mongoose';
 
 dotenv.config({ path: './config/config.env' });
+
+/**
+ * @desc Connect to database.
+ */
+connectDB();
 
 var app = express();
 
